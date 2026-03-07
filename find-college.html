@@ -11,6 +11,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -23,13 +24,13 @@
       </div>
 
       <div class="nav-links" id="mobileMenu">
-        <a href="index.html" >Home</a>
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="find-college.html" class="active">College Listing</a>
         <a href="courses.html">Courses</a>
         <a href="testimonials.html">Testimonials</a>
         <a href="contact.html">Contact</a>
-        <a href="contact.html" class="nav-cta mobile-cta">Enroll Now</a>
+        <a href="contact.html" class="nav-cta mobile-cta" style="color: #fff;">Enroll Now</a>
       </div>
 
       <a href="contact.html" class="nav-cta desktop-cta">Enroll Now</a>
@@ -123,13 +124,15 @@
           <h4>Subscribe</h4>
           <p>Get weekly updates on admissions & scholarships.</p>
           <form style="display: flex; margin-top: 20px;">
-            <input type="email" placeholder="Your email" style="padding: 12px; border-radius: 40px 0 0 40px; border: none; flex:1; background: #1e293b; color: white;">
-            <button style="background: var(--secondary); border: none; border-radius: 0 40px 40px 0; padding: 0 18px; color: white; font-weight: bold;">→</button>
+            <input type="email" placeholder="Your email"
+              style="padding: 12px; border-radius: 40px 0 0 40px; border: none; flex:1; background: #1e293b; color: white;">
+            <button
+              style="background: var(--secondary); border: none; border-radius: 0 40px 40px 0; padding: 0 18px; color: white; font-weight: bold;">→</button>
           </form>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2025 APJ AGNI TRUST. All rights reserved.</span>
+        <span>© 2026 APJ AGNI TRUST. All rights reserved.</span>
         <span>Designed by humeen</span>
       </div>
     </div>
@@ -144,23 +147,23 @@
       const collegesData = [
         {
           id: 1,
-          name: "VIJAYALAKSHMI LAW COLLEGE",
-          location: "Bengaluru, Karnataka",
+          name: "DHANALAKSHMI SRINIVASAN COLLEGE OF ENGINEERING & TECHNOLOGY",
+          location: "Chennai, Tamil Nadu",
           image: "https://placehold.co/600x400/0A4A7E/white?text=Law+College",
           courses: ["B.A LL.B", "B.B.A LL.B", "B.Com LL.B", "LL.B", "LL.M"],
           category: "Law",
-          sector: "Private",
+          sector: "Anna University",
           country: "India",
           state: "Karnataka",
           city: "Bengaluru",
-          established: 1953,
+          established: 2001,
           students: "1,200+",
           enrollmentLink: "#"
         },
         {
           id: 2,
-          name: "SHK Aviation College",
-          location: "Chennai, Tamil Nadu",
+          name: "VIJAYALAKSHMI LAW COLLEGE",
+          location: "Bengaluru, Karnataka",
           image: "https://placehold.co/600x400/F7A41D/white?text=Aviation+College",
           courses: ["B.Sc Aviation", "Diploma in Cabin Crew", "BBA Airport Management", "MBA Aviation Management", "Aircraft Maintenance"],
           category: "Aviation",
@@ -168,44 +171,44 @@
           country: "India",
           state: "Tamil Nadu",
           city: "Chennai",
-          established: 2020,
+          established: 1953,
           students: "850+",
           enrollmentLink: "#"
         },
         {
           id: 3,
-          name: "JEPPIAR UNIVERSITY",
+          name: "SHK Aviation College",
           location: "Chennai, Tamil Nadu",
           image: "https://placehold.co/600x400/E56B1A/white?text=Jeppiar+University",
           courses: ["B.E CSE", "B.Tech IT", "MBA", "M.E Applied Electronics", "B.Arch"],
           category: "Engineering",
-          sector: "Private",
+          sector: "alagappa university",
           country: "India",
           state: "Tamil Nadu",
           city: "Chennai",
-          established: 2021,
+          established: 2020,
           students: "5,000+",
           enrollmentLink: "#"
         },
         {
           id: 4,
-          name: "ST PETER’S UNIVERSITY",
-          location: "Avadi - Chennai, Tamil Nadu",
+          name: "JEPPIAR UNIVERSITY",
+          location: "Chennai, Tamil Nadu",
           image: "https://placehold.co/600x400/0A4A7E/white?text=St+Peter+University",
           courses: ["B.E", "B.Tech", "MBA", "M.E", "Ph.D"],
           category: "Engineering",
-          sector: "Private",
+          sector: "Private University",
           country: "India",
           state: "Tamil Nadu",
           city: "Chennai",
-          established: 1992,
+          established: 2021,
           students: "3,500+",
           enrollmentLink: "#"
         },
         {
           id: 5,
-          name: "CHETTINAD UNIVERSITY",
-          location: "Kelambakkam, Tamil Nadu",
+          name: "ST PETER’S UNIVERSITY",
+          location: "Avadi - Chennai, Tamil Nadu",
           image: "https://placehold.co/600x400/F7A41D/white?text=Chettinad+University",
           courses: ["MBBS", "B.Sc Nursing", "M.P.T", "B.Pharm", "M.Sc Medical"],
           category: "Medical",
@@ -213,88 +216,28 @@
           country: "India",
           state: "Tamil Nadu",
           city: "Kelambakkam",
-          established: 2005,
+          established: 1992,
           students: "2,800+",
           enrollmentLink: "#"
         },
         {
           id: 6,
-          name: "ALAGAPPA UNIVERSITY",
-          location: "Karaikudi, Tamil Nadu",
+          name: "CHETTINAD UNIVERSITY",
+          location: "Kelambakkam, Tamil Naduu",
           image: "https://placehold.co/600x400/0A4A7E/white?text=Alagappa+University",
           courses: ["B.Sc", "M.Sc", "MBA", "M.C.A", "Ph.D"],
           category: "Science",
-          sector: "Government",
+          sector: "Private University",
           country: "India",
           state: "Tamil Nadu",
           city: "Karaikudi",
-          established: 1985,
-          students: "6,000+",
-          enrollmentLink: "#"
-        },
-        {
-          id: 7,
-          name: "DELHI TECHNICAL CAMPUS",
-          location: "New Delhi, Delhi",
-          image: "https://placehold.co/600x400/E56B1A/white?text=Delhi+Tech",
-          courses: ["B.Tech CSE", "B.Tech AI&DS", "MBA", "MCA", "BBA"],
-          category: "Engineering",
-          sector: "Private",
-          country: "India",
-          state: "Delhi",
-          city: "New Delhi",
-          established: 2010,
-          students: "3,200+",
-          enrollmentLink: "#"
-        },
-        {
-          id: 8,
-          name: "NATIONAL INSTITUTE OF PHARMACY",
-          location: "Lucknow, Uttar Pradesh",
-          image: "https://placehold.co/600x400/0A4A7E/white?text=NIP",
-          courses: ["B.Pharm", "D.Pharm", "Pharm.D", "M.Pharm Pharmacology"],
-          category: "Pharmacy",
-          sector: "Government",
-          country: "India",
-          state: "Uttar Pradesh",
-          city: "Lucknow",
-          established: 1998,
-          students: "1,100+",
-          enrollmentLink: "#"
-        },
-        {
-          id: 9,
-          name: "GLOBAL MANAGEMENT INSTITUTE",
-          location: "Mumbai, Maharashtra",
-          image: "https://placehold.co/600x400/F7A41D/white?text=GMI",
-          courses: ["MBA", "BBA", "PGDM", "Executive MBA"],
-          category: "Management",
-          sector: "Private",
-          country: "India",
-          state: "Maharashtra",
-          city: "Mumbai",
           established: 2005,
-          students: "2,000+",
-          enrollmentLink: "#"
-        },
-        {
-          id: 10,
-          name: "BENGAL COLLEGE OF ARTS",
-          location: "Kolkata, West Bengal",
-          image: "https://placehold.co/600x400/E56B1A/white?text=Arts+College",
-          courses: ["B.A English", "B.A History", "M.A Bengali", "B.A Philosophy"],
-          category: "Arts",
-          sector: "Government",
-          country: "India",
-          state: "West Bengal",
-          city: "Kolkata",
-          established: 1965,
-          students: "2,500+",
+          students: "6,000+",
           enrollmentLink: "#"
         }
       ];
 
-      // ---------- DERIVED FILTERS (unique values with counts) ----------
+      // ---------- DERIVED FILTERS (unique values with counts) ----------c
       function buildFilterOptions() {
         const filters = {
           country: {},
@@ -473,7 +416,7 @@
     }
   </style>
 
-    <script>
+  <script>
     const menuToggle = document.getElementById("menuToggle");
     const mobileMenu = document.getElementById("mobileMenu");
     const menuLinks = mobileMenu.querySelectorAll("a");
