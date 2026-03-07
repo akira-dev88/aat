@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APJ AGNI TRUST · Courses | Explore Programs</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Font: Inter + Space Grotesk -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container navbar">
+      <div class="logo">
+        <img src="aat.jpeg" alt="logo" width="60" height="auto">
+      </div>
+
+      <div class="nav-links" id="mobileMenu">
+        <a href="index.html" >Home</a>
+        <a href="about.html">About</a>
+        <a href="find-college.html">College Listing</a>
+        <a href="courses.html" class="active">Courses</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="nav-cta mobile-cta">Enroll Now</a>
+      </div>
+
+      <a href="contact.html" class="nav-cta desktop-cta">Enroll Now</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Explore Our Programs</h1>
+        <p style="color: var(--gray-600); max-width: 700px;">Choose from a wide range of undergraduate and postgraduate
+          courses designed for your success.</p>
+      </div>
+    </section>
+
+    <!-- QUICK FILTER TABS (by degree) -->
+    <section class="course-tabs">
+      <div class="container">
+        <div class="tab-container" id="courseTabs">
+          <button class="tab-btn active" data-filter="all">All Courses</button>
+          <button class="tab-btn" data-filter="B.E">B.E</button>
+          <button class="tab-btn" data-filter="B.Tech">B.Tech</button>
+          <button class="tab-btn" data-filter="MBA">MBA</button>
+          <button class="tab-btn" data-filter="M.E">M.E</button>
+          <button class="tab-btn" data-filter="M.Tech">M.Tech</button>
+          <button class="tab-btn" data-filter="B.Sc (CS)">B.Sc (CS)</button>
+          <button class="tab-btn" data-filter="BBA">BBA</button>
+          <button class="tab-btn" data-filter="B.Tech CSE">B.Tech CSE</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- COURSE GRID (dynamic) -->
+    <section class="courses-section">
+      <div class="container">
+        <div class="course-grid" id="courseGrid"></div>
+        <div id="noResults" style="text-align:center; padding:60px; display:none;">No courses match the selected filter.
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROGRAMS (B.Tech CSE specializations) -->
+    <section class="featured-programs">
+      <div class="container">
+        <h2 class="section-title" style="text-align:center;">Popular B.Tech Computer Science Specializations</h2>
+        <div class="featured-grid">
+          <div class="featured-item">
+            <i class="fas fa-microchip"></i>
+            <h3>AI & Data Science</h3>
+            <p>4 years • 60 seats</p>
+          </div>
+          <div class="featured-item">
+            <i class="fas fa-shield-haltered"></i>
+            <h3>Cyber Security</h3>
+            <p>4 years • 45 seats</p>
+          </div>
+          <div class="featured-item">
+            <i class="fas fa-cloud"></i>
+            <h3>Cloud Computing</h3>
+            <p>4 years • 50 seats</p>
+          </div>
+          <div class="featured-item">
+            <i class="fas fa-robot"></i>
+            <h3>AI & Machine Learning</h3>
+            <p>4 years • 40 seats</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTNER CTA (same as home) -->
+    <section class="partner-cta-section">
+      <div class="container partner-flex">
+        <div class="partner-card">
+          <div class="partner-img"><i class="fas fa-handshake"></i></div>
+          <h3>Become a Channel Partner?</h3>
+          <p>Are you an educational consultant or want to become an educational consultant? Tution Centres, School
+            Teachers, College Professors, e-Service Centres</p>
+          <a href="#" class="btn">Get Started →</a>
+        </div>
+        <div class="partner-card">
+          <div class="partner-img"><i class="fas fa-building-columns"></i></div>
+          <h3>Partner with COLLEGE MOC?</h3>
+          <p>Are you a college or university looking for more admissions? Partner with COLLEGE MOC today for guaranteed
+            student reach & growth!</p>
+          <a href="#" class="btn">Get Started →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-logo">
+          <img src="aat.jpeg" alt="logo" width="120px" height="auto" style="border-radius: 10px;">
+          <p>Empowering students, building futures since 2012.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick links</h4>
+          <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="find-college.html">Find College</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Terms of use</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Subscribe</h4>
+          <p>Get weekly updates on admissions & scholarships.</p>
+          <form style="display: flex; margin-top: 20px;">
+            <input type="email" placeholder="Your email" style="padding: 12px; border-radius: 40px 0 0 40px; border: none; flex:1; background: #1e293b; color: white;">
+            <button style="background: var(--secondary); border: none; border-radius: 0 40px 40px 0; padding: 0 18px; color: white; font-weight: bold;">→</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 APJ AGNI TRUST. All rights reserved.</span>
+        <span>Designed by humeen</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT: Dynamic Course Data & Filtering -->
+  <script>
+    (function () {
+      "use strict";
+
+      // ---------- COURSE DATA (easily updatable) ----------
+      const courses = [
+        // B.E programs
+        { id: 1, name: "B.E Computer Science Engineering", degree: "B.E", duration: "4 years", seats: 120, description: "Core CS fundamentals with hands-on programming, algorithms, and system design.", icon: "fa-computer", colleges: 45 },
+        { id: 2, name: "B.E Electronics & Communication", degree: "B.E", duration: "4 years", seats: 90, description: "Analog & digital electronics, communication systems, VLSI design.", icon: "fa-microchip", colleges: 38 },
+        { id: 3, name: "B.E Mechanical Engineering", degree: "B.E", duration: "4 years", seats: 75, description: "Thermodynamics, manufacturing, CAD, and robotics.", icon: "fa-gear", colleges: 42 },
+        // B.Tech programs
+        { id: 4, name: "B.Tech Information Technology", degree: "B.Tech", duration: "4 years", seats: 60, description: "Networking, databases, web development, and cloud computing.", icon: "fa-wifi", colleges: 30 },
+        { id: 5, name: "B.Tech Artificial Intelligence & DS", degree: "B.Tech", duration: "4 years", seats: 50, description: "Machine learning, big data analytics, Python, and AI ethics.", icon: "fa-robot", colleges: 22 },
+        { id: 6, name: "B.Tech Computer Science & Engg", degree: "B.Tech CSE", duration: "4 years", seats: 120, description: "Comprehensive CSE covering algorithms, OS, networks, and security.", icon: "fa-laptop-code", colleges: 65 },
+        // MBA
+        { id: 7, name: "MBA Finance", degree: "MBA", duration: "2 years", seats: 60, description: "Corporate finance, investment banking, financial markets.", icon: "fa-chart-line", colleges: 28 },
+        { id: 8, name: "MBA Marketing", degree: "MBA", duration: "2 years", seats: 55, description: "Brand management, consumer behavior, digital marketing.", icon: "fa-bullhorn", colleges: 26 },
+        { id: 9, name: "MBA Human Resources", degree: "MBA", duration: "2 years", seats: 40, description: "Talent acquisition, organizational behavior, HR analytics.", icon: "fa-users", colleges: 24 },
+        // M.E
+        { id: 10, name: "M.E Structural Engineering", degree: "M.E", duration: "2 years", seats: 25, description: "Advanced structural analysis, earthquake engineering, design.", icon: "fa-building", colleges: 15 },
+        { id: 11, name: "M.E Power Systems", degree: "M.E", duration: "2 years", seats: 20, description: "Electrical machines, power electronics, smart grids.", icon: "fa-bolt", colleges: 12 },
+        // M.Tech
+        { id: 12, name: "M.Tech Computer Science", degree: "M.Tech", duration: "2 years", seats: 30, description: "Advanced algorithms, machine learning, research-oriented.", icon: "fa-code", colleges: 18 },
+        { id: 13, name: "M.Tech VLSI Design", degree: "M.Tech", duration: "2 years", seats: 18, description: "Chip design, FPGA, embedded systems.", icon: "fa-microchip", colleges: 10 },
+        // B.Sc (CS)
+        { id: 14, name: "B.Sc Computer Science", degree: "B.Sc (CS)", duration: "3 years", seats: 80, description: "Programming, databases, web development, mathematics.", icon: "fa-database", colleges: 50 },
+        { id: 15, name: "B.Sc Information Technology", degree: "B.Sc (CS)", duration: "3 years", seats: 70, description: "Networking, cybersecurity, software engineering.", icon: "fa-network-wired", colleges: 35 },
+        // BBA
+        { id: 16, name: "BBA General", degree: "BBA", duration: "3 years", seats: 100, description: "Management principles, marketing, finance, entrepreneurship.", icon: "fa-chart-pie", colleges: 60 },
+        { id: 17, name: "BBA Digital Marketing", degree: "BBA", duration: "3 years", seats: 45, description: "SEO, social media, content strategy, e-commerce.", icon: "fa-megaphone", colleges: 20 },
+        // Additional B.Tech CSE specializations
+        { id: 18, name: "B.Tech CSE (Cyber Security)", degree: "B.Tech CSE", duration: "4 years", seats: 40, description: "Network security, cryptography, ethical hacking.", icon: "fa-shield", colleges: 25 },
+        { id: 19, name: "B.Tech CSE (AI & ML)", degree: "B.Tech CSE", duration: "4 years", seats: 35, description: "Deep learning, neural networks, computer vision.", icon: "fa-brain", colleges: 22 },
+        { id: 20, name: "B.Tech CSE (Data Science)", degree: "B.Tech CSE", duration: "4 years", seats: 45, description: "Statistics, big data, data visualization, Python.", icon: "fa-chart-bar", colleges: 30 }
+      ];
+
+      // ---------- RENDER COURSE CARDS ----------
+      const grid = document.getElementById('courseGrid');
+      const noResults = document.getElementById('noResults');
+
+      function renderCourses(filterDegree = 'all') {
+        let filtered = courses;
+        if (filterDegree !== 'all') {
+          filtered = courses.filter(c => c.degree === filterDegree);
+        }
+
+        if (filtered.length === 0) {
+          grid.style.display = 'none';
+          noResults.style.display = 'block';
+        } else {
+          grid.style.display = 'grid';
+          noResults.style.display = 'none';
+
+          let html = '';
+          filtered.forEach(c => {
+            html += `
+              <div class="course-card">
+                <div class="card-header">
+                  <h3>${c.name}</h3>
+                  <span class="degree-type">${c.degree}</span>
+                </div>
+                <div class="card-body">
+                  <div class="card-meta">
+                    <span><i class="fas fa-clock"></i> ${c.duration}</span>
+                    <span><i class="fas fa-users"></i> ${c.seats} seats</span>
+                    <span><i class="fas fa-university"></i> ${c.colleges}+ colleges</span>
+                  </div>
+                  <p class="card-desc">${c.description}</p>
+                </div>
+                <div class="card-footer">
+                  <span class="duration"><i class="fas fa-calendar-alt"></i> ${c.duration}</span>
+                  <a href="#" class="enroll-link">Apply now</a>
+                </div>
+              </div>
+            `;
+          });
+          grid.innerHTML = html;
+        }
+      }
+
+      // ---------- TAB FILTERING ----------
+      const tabs = document.querySelectorAll('.tab-btn');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+          const filter = this.dataset.filter;
+          // update active tab
+          tabs.forEach(t => t.classList.remove('active'));
+          this.classList.add('active');
+          // render filtered courses
+          renderCourses(filter);
+        });
+      });
+
+      // initial render (all courses)
+      renderCourses('all');
+    })();
+  </script>
+  <!-- ensure consistency with icons and colors -->
+  <style>
+    .card-header {
+      background: var(--primary);
+    }
+
+    .degree-type {
+      background: var(--secondary);
+    }
+
+    .enroll-link {
+      background: var(--secondary);
+    }
+
+    .enroll-link:hover {
+      background: var(--primary);
+    }
+  </style>
+
+    <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const menuLinks = mobileMenu.querySelectorAll("a");
+
+    menuToggle.addEventListener("click", () => {
+      menuToggle.classList.toggle("active");
+      mobileMenu.classList.toggle("active");
+      document.body.classList.toggle("menu-open");
+    });
+
+    menuLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        menuToggle.classList.remove("active");
+        mobileMenu.classList.remove("active");
+        document.body.classList.remove("menu-open");
+      });
+    });
+  </script>
+</body>
+
+</html>

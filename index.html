@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APJ AGNI TRUST · Home | Empowering Education</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Font: Inter + Space Grotesk (clean & modern) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container navbar">
+      <div class="logo">
+        <img src="aat.jpeg" alt="logo" width="60" height="auto">
+      </div>
+
+      <div class="nav-links" id="mobileMenu">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="find-college.html">College Listing</a>
+        <a href="courses.html">Courses</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="nav-cta mobile-cta">Enroll Now</a>
+      </div>
+
+      <a href="contact.html" class="nav-cta desktop-cta">Enroll Now</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <!-- HERO SLIDER (dynamic) -->
+    <section class="hero-slider" id="heroSlider">
+      <div class="slides-container" id="slidesContainer">
+        <!-- slides injected via js -->
+      </div>
+      <div class="slider-dots" id="sliderDots"></div>
+    </section>
+
+    <!-- COLLEGE GRID SECTION -->
+    <section class="college-grid-section">
+      <div class="container">
+        <h2 class="section-title">Top affiliated colleges</h2>
+        <p class="section-subhead">Explore institutions trusted by thousands of students</p>
+        <div class="college-grid" id="collegeGrid"></div>
+      </div>
+    </section>
+
+    <!-- FEATURES CATEGORY GRID -->
+    <section class="features-section">
+      <div class="container">
+        <div class="category-grid" id="categoryGrid"></div>
+      </div>
+    </section>
+
+    <!-- CARD ROW (Low Fees, Counseling etc) -->
+    <section class="card-row">
+      <div class="container">
+        <div class="row-grid" id="serviceCards"></div>
+      </div>
+    </section>
+
+    <!-- QUICK STATS -->
+    <section class="quick-stats">
+      <div class="container">
+        <div class="stats-grid" id="statsGrid"></div>
+      </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section class="reviews-section">
+      <div class="container">
+        <h2 class="section-title">Student & Parent Reviews</h2>
+        <p class="section-subhead">Our lovely students feedback</p>
+        <div class="review-grid" id="reviewGrid"></div>
+      </div>
+    </section>
+
+    <!-- PARTNER CTA (Become Channel Partner + College MOC) -->
+    <section class="partner-section">
+      <div class="container partner-flex" id="partnerSection"></div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-logo">
+          <img src="aat.jpeg" alt="logo" width="120px" height="auto" style="border-radius: 10px;">
+          <p>Empowering students, building futures since 2012.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick links</h4>
+          <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="find-college.html">Find College</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Terms of use</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Subscribe</h4>
+          <p>Get weekly updates on admissions & scholarships.</p>
+          <form style="display: flex; margin-top: 20px;">
+            <input type="email" placeholder="Your email"
+              style="padding: 12px; border-radius: 40px 0 0 40px; border: none; flex:1; background: #1e293b; color: white;">
+            <button
+              style="background: var(--secondary); border: none; border-radius: 0 40px 40px 0; padding: 0 18px; color: white; font-weight: bold;">→</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 APJ AGNI TRUST. All rights reserved.</span>
+        <span>Designed by humeen</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- REUSABLE DATA OBJECT (home.js equivalent) -->
+  <script>
+    (function () {
+      "use strict";
+
+      // ---------- MASTER DATA OBJECT – update once, reflects everywhere ----------
+      const siteData = {
+        // Hero slides (image placeholders – replace with actual URLs)
+        heroSlides: [
+          {
+            image: "https://placehold.co/1600x900/0A4A7E/white?text=Scholarship+Fair+2025",
+            subtitle: "Empowering dreams",
+            title: "Scholarships for bright futures",
+            heading: "Merit & need‑based aid up to ₹1.2L"
+          },
+          {
+            image: "https://placehold.co/1600x900/F7A41D/white?text=Campus+Life",
+            subtitle: "500+ partner colleges",
+            title: "Find your perfect campus",
+            heading: "Pan India & abroad options"
+          },
+          {
+            image: "https://placehold.co/1600x900/0A4A7E/white?text=Expert+Counseling",
+            subtitle: "Guidance you can trust",
+            title: "One‑on‑one career counseling",
+            heading: "10+ years experienced advisors"
+          },
+          {
+            image: "https://placehold.co/1600x900/E56B1A/white?text=Placement+Assured",
+            subtitle: "100% placement support",
+            title: "Top recruiters, dream packages",
+            heading: "Average package ₹6.2 LPA"
+          }
+        ],
+
+        // College grid (exactly 5 items)
+        colleges: [
+          {
+            image: "https://placehold.co/600x400/0A4A7E/white?text=Global+Institute",
+            university: "Anna University",
+            name: "Global Institute of Engineering",
+            district: "Chennai",
+            state: "Tamil Nadu",
+            courses: "B.E, B.Tech, M.E",
+            students: "3,200+"
+          },
+          {
+            image: "https://placehold.co/600x400/F7A41D/white?text=National+College",
+            university: "Bangalore University",
+            name: "National College of Arts & Science",
+            district: "Bengaluru",
+            state: "Karnataka",
+            courses: "B.Sc, BBA, M.Sc",
+            students: "2,800+"
+          },
+          {
+            image: "https://placehold.co/600x400/E56B1A/white?text=City+Polytechnic",
+            university: "SBTE",
+            name: "City Polytechnic & Management",
+            district: "Pune",
+            state: "Maharashtra",
+            courses: "Diploma, MBA, MCA",
+            students: "1,950+"
+          },
+          {
+            image: "https://placehold.co/600x400/0A4A7E/white?text=Royal+Medical",
+            university: "MUHS",
+            name: "Royal Medical & Paramedical",
+            district: "Nashik",
+            state: "Maharashtra",
+            courses: "MBBS, B.Sc Nursing, Pharmacy",
+            students: "1,400+"
+          },
+          {
+            image: "https://placehold.co/600x400/F7A41D/white?text=National+Law",
+            university: "NLU",
+            name: "National Law College",
+            district: "Delhi",
+            state: "Delhi NCR",
+            courses: "BA LLB, LLM",
+            students: "1,100+"
+          }
+        ],
+
+        // Category features (Engineering, Management etc) – with counts
+        categories: [
+          { name: "Engineering", count: "20", icon: "fa-gear" },
+          { name: "Management", count: "1", icon: "fa-chart-line" },
+          { name: "Commerce", count: "0", icon: "fa-calculator" },
+          { name: "Arts", count: "2", icon: "fa-paint-brush" },
+          { name: "Medical", count: "36", icon: "fa-heart-pulse" },
+          { name: "Science", count: "70", icon: "fa-flask" },
+          { name: "Pharmacy", count: "6", icon: "fa-pills" },
+          { name: "Paramedical", count: "12", icon: "fa-truck-medical" }
+        ],
+
+        // Service cards (low fees, expert counseling etc)
+        services: [
+          {
+            icon: "fa-coins",
+            title: "Low Fees & Scholarships",
+            desc: "Guidance to optimize costs and aid opportunities."
+          },
+          {
+            icon: "fa-headset",
+            title: "Expert Counseling",
+            desc: "Talk to real advisors when you need clarity."
+          },
+          {
+            icon: "fa-globe",
+            title: "India & Abroad",
+            desc: "Explore programs locally and overseas."
+          },
+          {
+            icon: "fa-graduation-cap",
+            title: "Graduate Admissions",
+            desc: "Scholarship facility provides financial assistance."
+          }
+        ],
+
+        // Stats (quick views)
+        stats: [
+          { icon: "fa-user-graduate", value: "14k+", label: "Student Enrolled" },
+          { icon: "fa-book-open", value: "500+", label: "Courses" },
+          { icon: "fa-building-columns", value: "200+", label: "College & Universities" },
+          { icon: "fa-briefcase", value: "100%", label: "Placement" }
+        ],
+
+        // Student reviews (3 items)
+        reviews: [
+          {
+            rating: 5,
+            text: "APJ AGNI TRUST helped me secure admission in my dream engineering college. The counselors were patient and guided me at every step.",
+            author: "Rahul S., B.Tech student"
+          },
+          {
+            rating: 5,
+            text: "I was confused between MBA colleges. Their expert counseling simplified everything. Now I'm at a top B‑school with scholarship!",
+            author: "Priya K., MBA"
+          },
+          {
+            rating: 4.5,
+            text: "My parents were worried about costs. The team showed us affordable options with great placement records. Truly grateful.",
+            author: "Arjun M., B.Sc (CS)"
+          }
+        ],
+
+        // Partner CTA section (two blocks)
+        partnerBlocks: [
+          {
+            icon: "fa-handshake",
+            title: "Become a Channel Partner?",
+            desc: "Are you an educational consultant or want to become an educational consultant? Tution Centres, School Teachers, College Professors, e-Service Centres",
+            buttonText: "Get Started",
+            buttonLink: "#"
+          },
+          {
+            icon: "fa-building-columns",
+            title: "Partner with COLLEGE MOC?",
+            desc: "Are you a college or university looking for more admissions? Partner with COLLEGE MOC today for guaranteed student reach & growth!",
+            buttonText: "Get Started",
+            buttonLink: "#"
+          }
+        ]
+      };
+
+      // ---------- RENDER FUNCTIONS ----------
+      function renderHero() {
+        const container = document.getElementById('slidesContainer');
+        const dotsContainer = document.getElementById('sliderDots');
+        if (!container) return;
+
+        let slidesHtml = '';
+        let dotsHtml = '';
+        siteData.heroSlides.forEach((slide, idx) => {
+          const activeClass = idx === 0 ? 'active' : '';
+          slidesHtml += `
+            <div class="slide ${activeClass}" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 80%), url('${slide.image}');">
+              <div class="slide-content">
+                <div class="slide-subtitle">${slide.subtitle}</div>
+                <div class="slide-title">${slide.title}</div>
+                <div class="slide-heading">${slide.heading}</div>
+              </div>
+            </div>
+          `;
+          dotsHtml += `<div class="dot ${idx === 0 ? 'active' : ''}" data-index="${idx}"></div>`;
+        });
+        container.innerHTML = slidesHtml;
+        dotsContainer.innerHTML = dotsHtml;
+
+        // Slider logic (auto + click)
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlide(index) {
+          slides.forEach((s, i) => {
+            s.classList.toggle('active', i === index);
+          });
+          dots.forEach((d, i) => {
+            d.classList.toggle('active', i === index);
+          });
+          currentSlide = index;
+        }
+
+        // Auto advance
+        setInterval(() => {
+          let next = (currentSlide + 1) % slides.length;
+          showSlide(next);
+        }, 5000);
+
+        dots.forEach(dot => {
+          dot.addEventListener('click', (e) => {
+            const idx = parseInt(e.target.dataset.index, 10);
+            showSlide(idx);
+          });
+        });
+      }
+
+      function renderColleges() {
+        const grid = document.getElementById('collegeGrid');
+        if (!grid) return;
+        let html = '';
+        siteData.colleges.forEach(c => {
+          html += `
+            <div class="college-card">
+              <div class="card-img" style="background-image: url('${c.image}');"></div>
+              <div class="card-content">
+                <div class="univ-name">${c.university}</div>
+                <h3 class="college-name">${c.name}</h3>
+                <div class="location"><i class="fas fa-map-pin"></i> ${c.district}, ${c.state}</div>
+                <span class="course-tag"><i class="fas fa-book"></i> ${c.courses}</span>
+                <span class="course-tag"><i class="fas fa-users"></i> ${c.students}</span>
+                <div class="card-footer">
+                  <span></span>
+                  <a href="#" class="enroll-btn">Enroll now →</a>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+        grid.innerHTML = html;
+      }
+
+      function renderCategories() {
+        const grid = document.getElementById('categoryGrid');
+        if (!grid) return;
+        let html = '';
+        siteData.categories.forEach(cat => {
+          html += `
+            <div class="category-item">
+              <i class="fas ${cat.icon}"></i>
+              <h4>${cat.name}</h4>
+              <p>(${cat.count}) Courses</p>
+            </div>
+          `;
+        });
+        grid.innerHTML = html;
+      }
+
+      function renderServiceCards() {
+        const grid = document.getElementById('serviceCards');
+        if (!grid) return;
+        let html = '';
+        siteData.services.forEach(s => {
+          html += `
+            <div class="info-card">
+              <i class="fas ${s.icon}"></i>
+              <h3>${s.title}</h3>
+              <p style="color: var(--gray-600);">${s.desc}</p>
+            </div>
+          `;
+        });
+        grid.innerHTML = html;
+      }
+
+      function renderStats() {
+        const grid = document.getElementById('statsGrid');
+        if (!grid) return;
+        let html = '';
+        siteData.stats.forEach(stat => {
+          html += `
+            <div class="stat-item">
+              <i class="fas ${stat.icon}"></i>
+              <div class="stat-number">${stat.value}</div>
+              <div class="stat-label">${stat.label}</div>
+            </div>
+          `;
+        });
+        grid.innerHTML = html;
+      }
+
+      function renderReviews() {
+        const grid = document.getElementById('reviewGrid');
+        if (!grid) return;
+        let html = '';
+        siteData.reviews.forEach(r => {
+          let stars = '';
+          for (let i = 0; i < Math.floor(r.rating); i++) stars += '★';
+          if (r.rating % 1 !== 0) stars += '½';
+          html += `
+            <div class="review-card">
+              <div class="review-rating">${stars}</div>
+              <p class="review-text">"${r.text}"</p>
+              <div class="review-author">— ${r.author}</div>
+            </div>
+          `;
+        });
+        grid.innerHTML = html;
+      }
+
+      function renderPartner() {
+        const section = document.getElementById('partnerSection');
+        if (!section) return;
+        let html = '';
+        siteData.partnerBlocks.forEach(block => {
+          html += `
+            <div class="partner-card">
+              <div class="partner-img"><i class="fas ${block.icon}"></i></div>
+              <h3>${block.title}</h3>
+              <p>${block.desc}</p>
+              <a href="${block.buttonLink}" class="btn">${block.buttonText} →</a>
+            </div>
+          `;
+        });
+        section.innerHTML = html;
+      }
+
+      // Initial render
+      renderHero();
+      renderColleges();
+      renderCategories();
+      renderServiceCards();
+      renderStats();
+      renderReviews();
+      renderPartner();
+    })();
+  </script>
+  <!-- optional tiny style to match icons etc -->
+  <style>
+    .fa-star,
+    .fa-star-half-alt {
+      color: #fbbf24;
+    }
+
+    .category-item i,
+    .info-card i,
+    .partner-img i {
+      color: var(--secondary);
+    }
+
+    .stat-item i {
+      color: var(--secondary);
+    }
+  </style>
+    <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const menuLinks = mobileMenu.querySelectorAll("a");
+
+    menuToggle.addEventListener("click", () => {
+      menuToggle.classList.toggle("active");
+      mobileMenu.classList.toggle("active");
+      document.body.classList.toggle("menu-open");
+    });
+
+    menuLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        menuToggle.classList.remove("active");
+        mobileMenu.classList.remove("active");
+        document.body.classList.remove("menu-open");
+      });
+    });
+  </script>
+</body>
+
+</html>

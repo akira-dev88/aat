@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APJ AGNI TRUST · Contact Us | Get in Touch</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Font: Inter + Space Grotesk -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- HEADER (consistent) -->
+  <header>
+    <div class="container navbar">
+      <div class="logo">
+        <img src="aat.jpeg" alt="logo" width="60" height="auto">
+      </div>
+
+      <div class="nav-links" id="mobileMenu">
+        <a href="index.html" >Home</a>
+        <a href="about.html">About</a>
+        <a href="find-college.html">College Listing</a>
+        <a href="courses.html">Courses</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="contact.html" class="nav-cta mobile-cta">Enroll Now</a>
+      </div>
+
+      <a href="contact.html" class="nav-cta desktop-cta">Enroll Now</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Contact Us</h1>
+      </div>
+    </section>
+
+    <!-- SECTION 1: Contact info (left) + Form (right) -->
+    <section class="contact-section">
+      <div class="container contact-grid">
+        <!-- LEFT COLUMN: Location, Call, Email, Social -->
+        <div class="contact-info">
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="info-content">
+              <h4>Location</h4>
+              <p>123 Education Hub, Sector 18<br>New Delhi, Delhi 110001, India</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="info-content">
+              <h4>Call Now</h4>
+              <p><a href="tel:+911234567890">+91 12345 67890</a><br><a href="tel:+911234567891">+91 12345 67891</a></p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-envelope"></i></div>
+            <div class="info-content">
+              <h4>Email Us</h4>
+              <p><a href="mailto:info@apjagnitrust.org">info@apjagnitrust.org</a><br><a
+                  href="mailto:admissions@apjagnitrust.org">admissions@apjagnitrust.org</a></p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-share-alt"></i></div>
+            <div class="info-content">
+              <h4>Social Media</h4>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-x-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Contact Form with terms -->
+        <div class="contact-form">
+          <h2 style="margin-bottom: 25px;">Send us a message</h2>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" class="form-control" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" class="form-control" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" class="form-control" placeholder="+91 98765 43210">
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" class="form-control" placeholder="How can we help you?" required></textarea>
+            </div>
+            <div class="terms">
+              <input type="checkbox" id="terms" required>
+              <label for="terms">I agree to the <a href="#" style="color: var(--secondary);">Terms & Policies</a> and
+                consent to being contacted.</label>
+            </div>
+            <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"
+                style="margin-left: 8px;"></i></button>
+          </form>
+          <p style="margin-top: 20px; font-size:0.9rem; color:var(--gray-600);">* Required fields</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Map (embedded Google Map) -->
+    <section class="map-section">
+      <div class="container">
+        <div class="map-container">
+          <!-- Google Maps embed (placeholder for New Delhi) -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.901456782135!2d77.227375075938!3d28.612951782566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2daa9eb4d0b%3A0x717971119923a5f!2sIndia%20Gate!5e0!3m2!1sen!2sin!4v1687356789012!5m2!1sen!2sin"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Partner CTA (same as home/listing) -->
+    <section class="partner-cta-section">
+      <div class="container partner-flex">
+        <div class="partner-card">
+          <div class="partner-img"><i class="fas fa-handshake"></i></div>
+          <h3>Become a Channel Partner?</h3>
+          <p>Are you an educational consultant or want to become an educational consultant? Tution Centres, School
+            Teachers, College Professors, e-Service Centres</p>
+          <a href="#" class="btn">Get Started →</a>
+        </div>
+        <div class="partner-card">
+          <div class="partner-img"><i class="fas fa-building-columns"></i></div>
+          <h3>Partner with COLLEGE MOC?</h3>
+          <p>Are you a college or university looking for more admissions? Partner with COLLEGE MOC today for guaranteed
+            student reach & growth!</p>
+          <a href="#" class="btn">Get Started →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (consistent) -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-logo">
+          <img src="aat.jpeg" alt="logo" width="120px" height="auto" style="border-radius: 10px;">
+          <p>Empowering students, building futures since 2012.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick links</h4>
+          <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="find-college.html">Find College</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Terms of use</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Subscribe</h4>
+          <p>Get weekly updates on admissions & scholarships.</p>
+          <form style="display: flex; margin-top: 20px;">
+            <input type="email" placeholder="Your email"
+              style="padding: 12px; border-radius: 40px 0 0 40px; border: none; flex:1; background: #1e293b; color: white;">
+            <button
+              style="background: var(--secondary); border: none; border-radius: 0 40px 40px 0; padding: 0 18px; color: white; font-weight: bold;">→</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 APJ AGNI TRUST. All rights reserved.</span>
+        <span>Designed by humeen</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Simple form handling (prevent default + alert) -->
+  <script>
+    (function () {
+      const form = document.getElementById('contactForm');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          // Simple validation check (browser handles required)
+          alert('Thank you for reaching out! We will get back to you soon.');
+          form.reset();
+        });
+      }
+    })();
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const menuLinks = mobileMenu.querySelectorAll("a");
+
+    menuToggle.addEventListener("click", () => {
+      menuToggle.classList.toggle("active");
+      mobileMenu.classList.toggle("active");
+      document.body.classList.toggle("menu-open");
+    });
+
+    menuLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        menuToggle.classList.remove("active");
+        mobileMenu.classList.remove("active");
+        document.body.classList.remove("menu-open");
+      });
+    });
+  </script>
+</body>
+
+</html>
