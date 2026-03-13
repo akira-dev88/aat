@@ -13,6 +13,174 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ===== GLOBAL VARIABLES – from your reference ===== */
+        :root {
+            --primary: #0A4A7E;
+            --secondary: #e56b1a;
+            --accent: #520052;
+            --gray-100: #F8FAFC;
+            --gray-200: #F1F5F9;
+            --gray-600: #475569;
+            --gray-800: #1E293B;
+            --white: #FFFFFF;
+            --shadow-sm: 0 4px 6px -2px rgba(0, 0, 0, 0.05), 0 10px 15px -3px rgba(0, 0, 0, 0.03);
+            --radius: 18px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--white);
+            font-family: "Inter", sans-serif;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        /* ===== PLAIN PHOTO GALLERY SECTION – NO HOVER EFFECTS, NO CAPTIONS ===== */
+        .photo-gallery {
+            padding: 60px 0;
+            background: var(--white);
+        }
+
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .gallery-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+            font-family: "Space Grotesk", sans-serif;
+        }
+
+        .gallery-header p {
+            font-size: 1.2rem;
+            color: var(--gray-600);
+            max-width: 620px;
+            margin: 0 auto;
+        }
+
+        /* simple count badge (kept minimal, no hover) */
+        .photo-count {
+            display: inline-block;
+            background: var(--secondary);
+            color: var(--white);
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            margin-top: 12px;
+        }
+
+        /* ----- grid – completely plain, no overlays, no hover animations ----- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 24px;
+        }
+
+        .gallery-item {
+            position: relative;
+            /* kept for positioning context, but no pseudo-elements */
+            border-radius: var(--radius);
+            overflow: hidden;
+            background-color: var(--gray-200);
+            box-shadow: var(--shadow-sm);
+            /* no transform, no transition */
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            /* no scale transition */
+        }
+
+        /* remove all pseudo-elements and overlays */
+        .gallery-item::after {
+            display: none;
+        }
+
+        /* remove any hover effects on the item */
+        .gallery-item:hover {
+            transform: none;
+            box-shadow: var(--shadow-sm);
+            /* keep same shadow, no change */
+            border-bottom: none;
+        }
+
+        .gallery-item:hover img {
+            scale: none;
+        }
+
+        /* completely hide the caption block – it's not present in plain version */
+        .gallery-caption {
+            display: none;
+        }
+
+        /* ----- optional subtle visual distinction for the square photo (only border, no extra hover) ----- */
+        .gallery-item:nth-child(11) {
+            background-color: #fbe9d2;
+            /* very light amber, barely visible */
+            border: 2px solid var(--secondary);
+            /* just to hint the square, no interaction */
+        }
+
+        /* responsive column span for square (kept for layout only) */
+        @media (min-width: 700px) and (max-width: 1099px) {
+            .gallery-item:nth-child(11) {
+                grid-column: span 2;
+            }
+        }
+
+        @media (min-width: 1100px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-item:nth-child(11) {
+                grid-column: span 2;
+            }
+        }
+
+        /* responsive */
+        @media (max-width: 600px) {
+            .gallery-header h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* small note at bottom (just to indicate plain version, not part of gallery section) */
+        .demo-note {
+            text-align: center;
+            color: var(--gray-600);
+            padding: 30px 0;
+            border-top: 1px solid var(--gray-200);
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        .demo-note i {
+            color: var(--secondary);
+        }
+    </style>
+
 </head>
 
 <body>
@@ -24,7 +192,7 @@
             </div>
 
             <div class="nav-links" id="mobileMenu">
-                <a href="index.html" >Home</a>
+                <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="find-college.html">College Listing</a>
                 <a href="courses.html">Courses</a>
@@ -50,6 +218,60 @@
                 <h1>Student & Parent Reviews</h1>
                 <p style="color: var(--gray-600); max-width: 700px;">Real stories from students and families who found
                     their path with APJ AGNI TRUST.</p>
+            </div>
+        </section>
+
+        <section class="photo-gallery">
+            <div class="container">
+
+                <div class="gallery-grid">
+                    <!-- 10 landscape images 1080x651 -->
+                    <!-- photo 01 -->
+                    <div class="gallery-item">
+                        <img src="assets/img/gal/img-1.png" alt="campus 1" loading="lazy">
+                    </div>
+                    <!-- photo 02 -->
+                    <div class="gallery-item">
+                        <img src="assets/img/gal/img-2.png" alt="campus 2" loading="lazy">
+                    </div>
+                    <!-- photo 03 -->
+                    <div class="gallery-item">
+                        <img src="assets/img/gal/img-3.png" alt="campus 3" loading="lazy">
+                    </div>
+                    <!-- photo 04 -->
+                    <div class="gallery-item">
+                        <img src="assets/img/gal/img-4.png" alt="campus 4" loading="lazy">
+                    </div>
+                    <!-- photo 05 -->
+                    <div class="gallery-item">
+                        <img src="assets/img/gal/img-5.png" alt="campus 5" loading="lazy">
+                    </div>
+                    <!-- photo 06 -->
+                    <div class="gallery-item">
+                        <img src="assets/img/gal/img-6.png" alt="campus 6" loading="lazy">
+                    </div>
+                    <!-- photo 07 -->
+                    <div class="gallery-item">
+                        <img src="assets/img/gal/img-7.png" alt="campus 7" loading="lazy">
+                    </div>
+                    <!-- photo 08 -->
+                    <div class="gallery-item">
+                        <img src="assets/img/gal/img-9.png" alt="campus 8" loading="lazy">
+                    </div>
+                    <!-- photo 09 -->
+                    <div class="gallery-item">
+                        <img src="assets/img/gal/img-10.png" alt="campus 9" loading="lazy">
+                    </div>
+                    <!-- photo 10 -->
+                    <div class="gallery-item">
+                        <img src="assets/img/gal/img-11.png" alt="campus 10" loading="lazy">
+                    </div>
+
+                    <!-- 11th photo : 992x988 (square-ish) with a subtle amber border (no hover effect) -->
+                    <div class="gallery-item">
+                        <img src="assets/img/gal/img-8.png" alt="campus square" loading="lazy">
+                    </div>
+                </div>
             </div>
         </section>
 
